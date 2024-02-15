@@ -60,6 +60,8 @@ spec:
             workspace: source
           - name: source
             workspace: source
+          - name: MAVEN_MIRROR_URL
+            value: http://nexus:8081/repository/maven-public/            
         taskRef:
           name: maven
         params:
