@@ -69,6 +69,8 @@ spec:
             value:
               - clean
               - package
+          - name: MAVEN_MIRROR_URL
+            value: http://nexus:8081/repository/maven-public/              
 
   workspaces:
   - name: source
