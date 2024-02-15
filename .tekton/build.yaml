@@ -52,6 +52,8 @@ spec:
             value: $(params.repo_url)
           - name: revision
             value: $(params.revision)
+          - name: MAVEN_MIRROR_URL
+            value: http://nexus:8081/repository/maven-public/            
       - name: build
         runAfter:
           - fetch-repository
@@ -59,9 +61,7 @@ spec:
           - name: maven-settings
             workspace: source
           - name: source
-            workspace: source
-          - name: MAVEN_MIRROR_URL
-            value: http://nexus:8081/repository/maven-public/            
+            workspace: source          
         taskRef:
           name: maven
         params:
